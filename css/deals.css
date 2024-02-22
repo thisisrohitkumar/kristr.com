@@ -1,0 +1,133 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.reset__a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.deals__container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.rfq__form__container{
+    width: 40%;
+    height: 100%;
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deals__details__container{
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+.deals__heading{
+    text-align: center;
+    font-size: 1.2rem;
+    padding-inline: 50px;
+}
+
+.deals__grid{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    margin-inline: auto;
+    column-gap: 50px;
+}
+
+.deals__grid__item{
+    padding: 20px;
+}
+
+.deals__grid__item span{
+    display: block;
+}
+
+.deals__img{
+    width: 150px;
+    display: block;
+    margin-inline: auto;
+}
+
+.deals__details__container p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-inline: 50px;
+}
+
+.deals__note{
+    text-align: right;
+    float: right;
+    padding: 20px;
+}
+
+.deals__note small{
+    display: block;
+    font-size: .8rem;
+}
+
+.check__icon{
+    width: 30px;
+    display: inline;
+    transform: translateY(10px);
+}
+
+@media only screen and (max-width: 756px){
+    .deals__container{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    
+    .deals__grid{
+        grid-template-columns: auto;
+    }
+
+    .rfq__form__container{
+        width: 100%;
+    }
+
+    .deals__details__container{
+        width: 100%
+    }
+
+    .deals__heading{
+        font-size: .8rem;
+        padding-inline: 10px;
+    }
+
+    .deals__details__container p{
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        padding-inline: 10px;
+    }
+}
