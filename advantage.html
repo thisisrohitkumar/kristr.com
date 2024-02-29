@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="advantage__box">
+      <div class="advantage__heading">
+        <h2>The Maketronics Advantage</h2>
+      </div>
+      <div class="advantages">
+        <span class="advantage">
+            <img src="assets/icons/advantages/adv1.jpeg" alt="">
+            <p>100% new and original products</p>
+        </span>
+        <span class="advantage">
+            <img src="assets/icons/advantages/adv2.jpeg" alt="">
+            <p>Hassle-free returns</p>
+        </span>
+        <span class="advantage">
+            <img src="assets/icons/advantages/adv3.jpeg" alt="">
+            <p>Fast & responsive customer support</p>
+        </span>
+        <span class="advantage">
+            <img src="assets/icons/advantages/adv4.jpeg" alt="">
+            <p>Guaranteed worldwide delivery in 3 weeks**</p>
+        </span>
+        <span class="advantage">
+            <img src="assets/icons/advantages/adv5.jpeg" alt="">
+            <p>Quality assurance</p>
+        </span>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    .advantage__box{
+        width: 100%;
+    }
+
+    .advantage__heading h2{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .advantages{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 50px;
+        column-gap: 100px;
+        padding: 20px;
+    }
+
+    .advantage img{
+        width: 251px;
+    }
+
+    .advantage p{
+        text-align: center;
+        font-size: 1.5rem;
+        width: 251px;
+    }
+
+    @media screen and (max-width: 800px){
+        .advantage__heading h2{
+        font-size: 2rem;
+    }
+
+    .advantages{
+        flex-direction: column;
+        gap: 50px;
+    }
+    }
+  </style>
+</html>
