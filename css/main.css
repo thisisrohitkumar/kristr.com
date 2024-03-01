@@ -47,6 +47,10 @@ header {
   height: auto;
 }
 
+.mobile__header{
+  display: none;
+}
+
 .brand__logo img {
   height: 60px;
 }
@@ -119,34 +123,33 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-header #open{
- display: none;
-}
-
 .mobile__nav{
   display: none;
 }
 
-.mobile__nav #close{
-  display: none;
+.home__container {
+  width: 100%;
 }
 
-.home__container {
+
+main {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100vh;
+  padding: 20px 60px 20px 20px;
+  margin: auto;
   display: flex;
   flex-direction: row;
-  height: auto;
-  position: relative;
+  column-gap: 50px;
 }
+
 
 .sidebar {
   background-color: var(--primary-color);
   padding: 20px;
-  height: calc(100vh - 130px);
+  height: auto;
   width: fit-content;
   overflow-y: scroll;
-  width: 20%;
-  position: sticky;
-  top: 0;
 }
 
 .sidebar__list {
@@ -185,18 +188,9 @@ header #open{
   color: var(--primary-color);
 }
 
-main {
-  background-color: var(--primary-color);
-  width: 80%;
-  height: auto;
-  padding: 20px;
-  padding-bottom: 50px;
-}
-
 .slider {
   position: relative;
-  width: 90%;
-  margin: auto;
+  overflow: hidden;
 }
 
 .slides {
@@ -230,7 +224,6 @@ main {
 }
 
 .why__contatiner {
-  /* background-color: red; */
   margin-top: 50px;
 }
 
@@ -244,7 +237,8 @@ main {
 .why__details {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -276,7 +270,7 @@ main {
   color: var(--secondary-color);
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
