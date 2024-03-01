@@ -364,8 +364,12 @@ footer {
 
 /* Responsive CSS for Mobile devices */
 @media screen and (max-width: 756px) {
+  .page__wrapper{
+    position: relative;
+    overflow-x: hidden;
+  }
+
   .home__container {
-    /* display: none; */
     padding-top: 150px;
   }
 
@@ -373,10 +377,11 @@ footer {
     display: none;
   }
 
-  .page__wrapper{
-    position: relative;
-    overflow-x: hidden;
+  main{
+    height: auto;
+    padding: 20px;
   }
+
 
   .brand__logo img {
     height: 50px;
@@ -491,6 +496,11 @@ footer {
   
   .mobile__nav ul li a {
     color: var(--primary-color);
+  }
+
+  .why__heading{
+    font-size: 1.2rem;
+    padding-inline: 20px;
   }
 
   .footer__quick__links {
