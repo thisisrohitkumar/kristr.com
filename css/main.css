@@ -136,10 +136,11 @@ main {
   background-color: var(--primary-color);
   width: 100%;
   height: 100vh;
-  padding: 20px 60px 20px 20px;
+  padding: 20px;
   margin: auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   column-gap: 50px;
 }
 
@@ -241,7 +242,8 @@ main {
 }
 
 .why__contatiner {
-  margin-top: 50px;
+  /* background-color: red; */
+  padding-block: 50px;
 }
 
 .why__heading {
@@ -281,6 +283,33 @@ main {
 .why__item p {
   font-size: 1rem;
   text-align: center;
+}
+
+.hot__container {
+  padding-block: 50px;
+  /* background-color: blue; */
+}
+
+.hot__heading {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.hot__products{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+
+.hot__product img{
+  width: 300px;
+}
+
+.latest__container{
+  padding-block: 50px;
 }
 
 .latest__heading {
@@ -335,9 +364,64 @@ main {
   margin-block: 50px;
 }
 
+.article__container {
+  padding-block: 50px;
+  /* background-color: blue; */
+}
+
+.article__heading {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.articles{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+
+.article{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.article:hover img{
+  scale: 1.05;
+  transform: rotate(2deg);
+  transition: all .3s ease-in-out;
+  opacity: .6;
+}
+
+.article img{
+  
+  width: 350px;
+}
+.article img{
+  width: 350px;
+}
+.article p{
+  width: 350px;
+  font-size: 1.5rem;
+  margin-block: 30px;
+}
+
+.read__more__btn{
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
 footer {
   width: 100%;
   height: auto;
+  margin-top: 50px;
 }
 
 .footer__quick__links {
@@ -522,6 +606,40 @@ footer {
     font-size: 1.2rem;
     padding-inline: 20px;
   }
+  .hot__heading{
+    font-size: 1.2rem;
+    padding-inline: 20px;
+  }
+
+  .hot__products{
+    overflow-x: scroll;
+    justify-content: left;
+    padding-inline: 20px;
+  }
+  .latest__heading{
+    font-size: 1.2rem;
+    padding-inline: 20px;
+  }
+  .article__heading{
+    font-size: 1.2rem;
+    padding-inline: 20px;
+  }
+
+  .articles{
+    overflow-x: scroll;
+    gap: 20px;
+    justify-content: left;
+    padding-inline: 20px;
+  }
+
+  .article img{
+    width: 300px;
+  }
+  .article p{
+    width: 300px;
+  }
+
+
 
   .footer__quick__links {
     flex-direction: column;
