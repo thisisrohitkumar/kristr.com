@@ -505,7 +505,7 @@ footer {
 }
 
 /* Responsive CSS for Mobile devices */
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 900px) {
   .page__wrapper{
     position: relative;
     overflow-x: hidden;

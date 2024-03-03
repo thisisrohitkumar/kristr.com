@@ -101,7 +101,7 @@ body{
     transform: translateY(10px);
 }
 
-@media only screen and (max-width: 756px){
+@media only screen and (max-width: 900px){
     .deals__container{
         height: auto;
         flex-direction: column-reverse;
