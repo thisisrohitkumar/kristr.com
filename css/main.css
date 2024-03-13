@@ -41,10 +41,28 @@ header {
   padding-block: 10px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
   background-color: var(--primary-color);
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.header__scroll__up {
+  transform: translateY(-100%);
+}
+
+.header__scroll__down {
+  transform: translateY(0);
+}
+
+.mobile__header__scroll__up {
+  transform: translateY(-100%);
+}
+
+.mobile__header__scroll__down {
+  transform: translateY(0);
 }
 
 .mobile__header{
@@ -161,11 +179,12 @@ main {
 
 .sidebar__item {
   border-bottom: 1px solid var(--secondary-color);
+  font-size: 1rem;
 }
 
 .sidebar__item:first-of-type {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-bottom: none;
 }
 
@@ -181,7 +200,7 @@ main {
   display: block;
   transition: all 0.2s ease;
   padding-inline: 10px;
-  padding-block: 15px;
+  padding-block: 10px;
 }
 
 .sidebar__item .reset__a:hover {
@@ -202,6 +221,7 @@ main {
 .slides img {
   width: 100%;
 }
+
 .mb__slider {
   position: relative;
   overflow: hidden;
@@ -544,13 +564,15 @@ footer {
   .mobile__header {
     display: flex;
     flex-direction: column;
-    position: static;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
     background-color: var(--primary-color);
     width: 100%;
     height: auto;
     padding-bottom: 10px;
+    transition: transform 0.3s ease;
   }
 
   .mobile__header div:first-of-type{
