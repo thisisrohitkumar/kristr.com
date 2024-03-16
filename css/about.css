@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --accent-color: #004aad;
+}
+
+.about__page__heading{
+    width: 100%;
+    background-color: var(--accent-color);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__page__heading h2{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.about__details{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #F2F6FB;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.about__details h3{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.about__details p{
+    margin-bottom: 20px;
+}
+.about__details p:first-of-type{
+    margin-bottom: 70px;
+}
+
+.mission__and__vision{
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.mission{
+    background-color: #F2F6FB;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mission h4{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.mission p{
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+
+.vision{
+    background-color: #F2F6FB;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.vision h4{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.vision p{
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.offices{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+.offices h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.office__flag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: auto;
+}
+
+.office__flag img{
+    width: 150px;
+}
