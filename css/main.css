@@ -322,6 +322,7 @@ main {
   flex-direction: row;
   gap: 50px;
   justify-content: center;
+  animation: linear-translate 15s ease-in-out infinite;
 }
 
 .hot__product img{
@@ -767,6 +768,7 @@ footer {
     overflow-x: scroll;
     justify-content: left;
     padding-inline: 20px;
+    animation: none;
   }
   .latest__heading{
     font-size: 1.2rem;
@@ -833,5 +835,16 @@ footer {
 
   .footer__credits {
     padding-inline: 10px;
+  }
+}
+
+
+@keyframes linear-translate{
+  from{
+    transform: translateX(100%);
+  }
+
+  to{
+    transform: translateX(-100%);
   }
 }
