@@ -109,3 +109,68 @@
 .office__flag img{
     width: 150px;
 }
+
+/* Responsive CSS for Mobile devices */
+@media screen and (max-width: 900px) {
+    .about__page__heading{
+        height: 150px;
+    }
+
+    .about__page__heading h2{
+        font-size: 2rem;
+    }
+
+    .about__details{
+        width: 90%;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .about__details h3{
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
+    .about__details p{
+        text-align: justify;
+    }
+
+    .about__details p:first-of-type{
+        margin-bottom: 50px;
+    }
+
+    .mission__and__vision{
+        width: 90%;
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .mission{
+        padding: 20px;
+    }
+
+    .mission h4{
+        font-size: 2rem;
+    }
+
+    .vision{
+        padding: 20px;
+    }
+
+    .vision h4{
+        font-size: 2rem;
+    }
+
+    .offices h3{
+        font-size: 2rem;
+    }
+
+    .office__flag{
+        gap: 30px;
+    }
+
+    .office__flag img{
+        width: 100px;
+    }
+}
