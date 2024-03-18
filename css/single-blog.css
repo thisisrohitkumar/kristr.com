@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --accent-color: #004aad;
+}
+
+.single__blog__container{
+    width: 70%;
+    margin: auto;
+    margin-block: 50px;
+}
+
+.single__blog__header{
+    text-align: center;
+}
+
+.single__blog__title h3{
+    font-size: 2.5rem;
+    margin-block: 50px;
+}
+
+.single__blog__metadata{
+    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.single__blog__metadata i{
+    margin-right: 10px;
+}
+
+.single__blog__content p{
+    margin-block: 50px;
+}
+
+/* Responsive CSS for Mobile devices */
+@media screen and (max-width: 900px) {
+    .single__blog__container{
+        width: 100%;
+        padding: 20px;
+    }
+    .single__blog__header{
+        text-align: center;
+    }
+    
+    .single__blog__title h3{
+        font-size: 2rem;
+        margin-block: 50px;
+    }
+    
+    .single__blog__metadata{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .single__blog__metadata i{
+        margin-right: 5px;
+    }
+}
