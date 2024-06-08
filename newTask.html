@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Task</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Fontawesome Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <style>
+.prod__cat__heading{
+    text-align: center;
+    margin: 50px auto;
+    width: 90%;
+    font-size: 1rem;
+}
+.prod__cat__box{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 35px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.prod__cat__img{
+    width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.prod__cat__img img{
+    width: 100%;
+
+}
+    .man__box__heading{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+      .man__box {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        padding: 35px;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        /* border-radius: 24px; */
+        /* margin-bottom: 50px; */
+      }
+      .wrappercat {
+        max-width: 1100px;
+        width: 100%;
+        position: relative;
+      }
+      .wrappercat i {
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 1.25rem;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+      }
+      .wrappercat i:active {
+        transform: translateY(-50%) scale(0.85);
+      }
+      .wrappercat i:first-child {
+        left: -22px;
+      }
+      .wrappercat i:last-child {
+        right: -22px;
+      }
+      .wrappercat .carouselcat {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        border-radius: 8px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+      .carouselcat::-webkit-scrollbar {
+        display: none;
+      }
+      .carouselcat.no-transition {
+        scroll-behavior: auto;
+      }
+      .carouselcat.draggingcat {
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+      }
+      .carouselcat.draggingcat .cardcat {
+        cursor: grab;
+        user-select: none;
+      }
+      .carouselcat :where(.cardcat, .imgcat) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .carouselcat .cardcat {
+        scroll-snap-align: start;
+        /* height: 342px; */
+        list-style: none;
+        background: #fff;
+        cursor: pointer;
+        padding-bottom: 15px;
+        flex-direction: column;
+        border-radius: 8px;
+      }
+      .carouselcat .cardcat .imgcat {
+        /* background: #ddd; */
+        /* height: 148px; */
+        width: 200px;
+        /* border-radius: 50%; */
+      }
+      .cardcat .imgcat img {
+        width: 100%;
+        /* border-radius: 50%; */
+        object-fit: cover;
+        border: 4px solid #fff;
+      }
+      .carouselcat .cardcat h2 {
+        font-weight: 500;
+        font-size: 1.56rem;
+        margin: 30px 0 5px;
+      }
+      .carouselcat .cardcat span {
+        color: #6a6d78;
+        font-size: 1.31rem;
+      }
+
+      .sub__cat__box {
+        padding: 35px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 35px;
+        align-items: flex-start;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 24px;
+      }
+
+      .sub__cat__left__col {
+        flex: 1;
+        padding: 35px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .sub__cat__left__col ul li {
+        margin-bottom: 10px;
+        margin-left: 20px;
+      }
+
+      .sub__cat__left__col__head {
+        border-bottom: 1px solid #000;
+        padding: 15px 0;
+        margin-bottom: 20px;
+      }
+
+      .sub__cat__right__col__head {
+        padding: 15px 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .sub__cat__right__col__head input {
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 1rem;
+        width: 200px;
+      }
+
+      .sub__cat__left__col__head h6 {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+
+      .sub__cat__right__col {
+        flex: 4;
+        padding: 20px 35px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .sub__cat__right__col__details table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .sub__cat__right__col__details table img {
+        width: 100px;
+      }
+
+      .sub__cat__right__col__details table th {
+        text-align: left;
+        background-color: grey;
+        padding: 8px;
+      }
+
+      .sub__cat__right__col__details table td {
+        padding: 8px;
+      }
+
+      .sub__cat__right__col__details table tr:nth-of-type(even) {
+        background-color: #ddd;
+      }
+
+      #pagination-controls {
+        text-align: right;
+        margin-top: 20px;
+        font-size: 1rem;
+      }
+
+      .pagination-button {
+        padding: 8px 12px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .pagination-button.active {
+        background-color: grey;
+        color: white;
+        border: 1px solid grey;
+      }
+
+      .pagination-button.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      @media screen and (max-width: 900px) {
+        .wrappercat .carouselcat {
+          grid-auto-columns: calc((100% / 2) - 9px);
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .wrappercat .carouselcat {
+          grid-auto-columns: 100%;
+        }
+      }
+    </style>
+
+    <div class="page__wrapper">
+      <div class="prod__cat__wrapper">
+        <div class="prod__cat__heading">
+          <h1>Product Category Heading</h1>
+        </div>
+        <div class="prod__cat__box">
+          <div class="prod__cat__img">
+            <img src="assets/images/connectors.webp" alt="prod cat" />
+          </div>
+          <div class="prod__cat__details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            facere debitis id nobis odit accusamus ea numquam beatae sequi
+            itaque, repellat laudantium, eos accusantium harum eveniet dolores.
+            Fugit, sint soluta!
+          </div>
+        </div>
+        <div class="man__box__heading">
+            <h5>Manufacturers</h5>
+        </div>
+        <div class="man__box">
+          <div class="wrappercat">
+            <i id="leftcat" class="fa-solid fa-angle-left"></i>
+            <ul class="carouselcat">
+              <li class="cardcat">
+                <div class="imgcat">
+                  <img src="/assets/manufacturers/analog.webp" alt="img" draggable="false" />
+                </div>
+              </li>
+              <li class="cardcat">
+                <div class="imgcat">
+                  <img src="/assets/manufacturers/microchip.webp" alt="img" draggable="false" />
+                </div>
+              </li>
+              <li class="cardcat">
+                <div class="imgcat">
+                  <img src="/assets/manufacturers/nxp.webp" alt="img" draggable="false" />
+                </div>
+              </li>
+              <li class="cardcat">
+                <div class="imgcat">
+                  <img src="/assets/manufacturers/onsemi.webp" alt="img" draggable="false" />
+                </div>
+              </li>
+              <li class="cardcat">
+                <div class="imgcat">
+                  <img src="/assets/manufacturers/stm.webp" alt="img" draggable="false" />
+                </div>
+              </li>
+              <li class="cardcat">
+                <div class="imgcat">
+                  <img src="/assets/manufacturers/te.webp" alt="img" draggable="false" />
+                </div>
+              </li>
+            </ul>
+            <i id="rightcat" class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="sub__cat__box">
+          <div class="sub__cat__left__col">
+            <div class="sub__cat__left__col__head">
+              <h6>Sub Category</h6>
+            </div>
+            <div>
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+                <li>item 8</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub__cat__right__col">
+            <div class="sub__cat__right__col__head">
+              <span>Filters</span>
+              <span
+                ><input type="search" name="cat_search" placeholder="Search"
+              /></span>
+            </div>
+            <div class="sub__cat__right__col__details">
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Product Image
+                    </th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Manufacturer</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/images/connectors.webp" alt="">
+                    </td>
+                    <td>Title</td>
+                    <td>Category</td>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="pagination-controls"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rowsPerPage = 4; // Set the number of rows per page
+        const tableBody = document.getElementById("table-body");
+        const paginationControls = document.getElementById(
+          "pagination-controls"
+        );
+        const rows = Array.from(tableBody.getElementsByTagName("tr"));
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+        let currentPage = 1;
+
+        const renderTable = (page) => {
+          // Hide all rows
+          rows.forEach((row, index) => {
+            row.style.display = "none";
+            if (
+              index >= (page - 1) * rowsPerPage &&
+              index < page * rowsPerPage
+            ) {
+              row.style.display = "";
+            }
+          });
+        };
+
+        const renderPaginationControls = () => {
+          paginationControls.innerHTML = "";
+
+          // Previous button
+          const prevButton = document.createElement("span");
+          prevButton.textContent = "Previous";
+          prevButton.className = "pagination-button";
+          if (currentPage === 1) {
+            prevButton.classList.add("disabled");
+          }
+          prevButton.addEventListener("click", () => {
+            if (currentPage > 1) {
+              currentPage--;
+              updateTable();
+            }
+          });
+          paginationControls.appendChild(prevButton);
+
+          // Page buttons
+          for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("span");
+            pageButton.textContent = i;
+            pageButton.className = "pagination-button";
+            if (i === currentPage) {
+              pageButton.classList.add("active");
+            }
+            pageButton.addEventListener("click", () => {
+              currentPage = i;
+              updateTable();
+            });
+            paginationControls.appendChild(pageButton);
+          }
+
+          // Next button
+          const nextButton = document.createElement("span");
+          nextButton.textContent = "Next";
+          nextButton.className = "pagination-button";
+          if (currentPage === totalPages) {
+            nextButton.classList.add("disabled");
+          }
+          nextButton.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+              currentPage++;
+              updateTable();
+            }
+          });
+          paginationControls.appendChild(nextButton);
+        };
+
+        const updateTable = () => {
+          renderTable(currentPage);
+          renderPaginationControls();
+        };
+
+        // Initial render
+        updateTable();
+      });
+
+      const wrappercat = document.querySelector(".wrappercat");
+      const carouselcat = document.querySelector(".carouselcat");
+      const firstCardWidthcat =
+        carouselcat.querySelector(".cardcat").offsetWidth;
+      const arrowBtnscat = document.querySelectorAll(".wrappercat i");
+      const carouselChildrenscat = [...carouselcat.children];
+
+      let isDraggingcat = false,
+        isAutoPlaycat = true,
+        startXcat,
+        startScrollLeftcat,
+        timeoutIdcat;
+
+      // Get the number of cards that can fit in the carousel at once
+      let cardPerViewcat = Math.round(
+        carouselcat.offsetWidth / firstCardWidthcat
+      );
+
+      // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+      carouselChildrenscat
+        .slice(-cardPerViewcat)
+        .reverse()
+        .forEach((card) => {
+          carouselcat.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+
+      // Insert copies of the first few cards to end of carousel for infinite scrolling
+      carouselChildrenscat.slice(0, cardPerViewcat).forEach((card) => {
+        carouselcat.insertAdjacentHTML("beforeend", card.outerHTML);
+      });
+
+      // Scroll the carousel at appropriate position to hide first few duplicate cards on Firefox
+      carouselcat.classList.add("no-transition");
+      carouselcat.scrollLeft = carouselcat.offsetWidth;
+      carouselcat.classList.remove("no-transition");
+
+      // Add event listeners for the arrow buttons to scroll the carousel left and right
+      arrowBtnscat.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carouselcat.scrollLeft +=
+            btn.id == "leftcat" ? -firstCardWidthcat : firstCardWidthcat;
+        });
+      });
+
+      const dragStartcat = (e) => {
+        isDraggingcat = true;
+        carouselcat.classList.add("draggingcat");
+        // Records the initial cursor and scroll position of the carousel
+        startXcat = e.pageX;
+        startScrollLeftcat = carouselcat.scrollLeft;
+      };
+
+      const draggingcat = (e) => {
+        if (!isDraggingcat) return; // if isDraggingcat is false return from here
+        // Updates the scroll position of the carousel based on the cursor movement
+        carouselcat.scrollLeft = startScrollLeftcat - (e.pageX - startXcat);
+      };
+
+      const dragStopcat = () => {
+        isDraggingcat = false;
+        carouselcat.classList.remove("draggingcat");
+      };
+
+      const infiniteScrollcat = () => {
+        // If the carousel is at the beginning, scroll to the end
+        if (carouselcat.scrollLeft === 0) {
+          carouselcat.classList.add("no-transition");
+          carouselcat.scrollLeft =
+            carouselcat.scrollWidth - 2 * carouselcat.offsetWidth;
+          carouselcat.classList.remove("no-transition");
+        }
+        // If the carousel is at the end, scroll to the beginning
+        else if (
+          Math.ceil(carouselcat.scrollLeft) ===
+          carouselcat.scrollWidth - carouselcat.offsetWidth
+        ) {
+          carouselcat.classList.add("no-transition");
+          carouselcat.scrollLeft = carouselcat.offsetWidth;
+          carouselcat.classList.remove("no-transition");
+        }
+
+        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+        clearTimeout(timeoutIdcat);
+        if (!wrappercat.matches(":hover")) autoPlaycat();
+      };
+
+      const autoPlaycat = () => {
+        if (window.innerWidth < 800 || !isAutoPlaycat) return; // Return if window is smaller than 800 or isAutoPlaycat is false
+        // Autoplay the carousel after every 2500 ms
+        timeoutIdcat = setTimeout(
+          () => (carouselcat.scrollLeft += firstCardWidthcat),
+          2500
+        );
+      };
+      autoPlaycat();
+
+      carouselcat.addEventListener("mousedown", dragStartcat);
+      carouselcat.addEventListener("mousemove", draggingcat);
+      document.addEventListener("mouseup", dragStopcat);
+      carouselcat.addEventListener("scroll", infiniteScrollcat);
+      wrappercat.addEventListener("mouseenter", () =>
+        clearTimeout(timeoutIdcat)
+      );
+      wrappercat.addEventListener("mouseleave", autoPlaycat);
+    </script>
+  </body>
+</html>

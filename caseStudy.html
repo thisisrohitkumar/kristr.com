@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="case_card__wrapper">
+      <a href="#"><div class="case__card">
+        <img src="/assets/images/case.jpg" alt="" />
+        <div class="case__card__overlay"></div>
+      </div></a>
+      <a href="#"><div class="case__card">
+        <img src="/assets/images/case.jpg" alt="" />
+        <div class="case__card__overlay"></div>
+      </div></a>
+      <a href="#"><div class="case__card">
+        <img src="/assets/images/case.jpg" alt="" />
+        <div class="case__card__overlay"></div>
+      </div></a>
+      <a href="#"><div class="case__card">
+        <img src="/assets/images/case.jpg" alt="" />
+        <div class="case__card__overlay"></div>
+      </div></a>
+      <a href="#"><div class="case__card">
+        <img src="/assets/images/case.jpg" alt="" />
+        <div class="case__card__overlay"></div>
+      </div></a>
+      <a href="#"><div class="case__card">
+        <img src="/assets/images/case.jpg" alt="" />
+        <div class="case__card__overlay"></div>
+      </div></a>
+    </div>
+
+    <style>
+      .case_card__wrapper {
+        display: flex;
+        gap: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 35px;
+        width: 90%;
+        margin: auto;
+      }
+
+      .case__card {
+        width: 300px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      .case__card img {
+        width: 100%;
+        transition: all 0.5s ease;
+      }
+      .case__card__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0000004e;
+        scale: 0;
+        transform-origin: center;
+      }
+
+      .case__card:hover .case__card__overlay {
+        scale: 1;
+      }
+
+      .case__card:hover img {
+        scale: 1.1;
+      }
+    </style>
+  </body>
+</html>
